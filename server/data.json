@@ -1,0 +1,204 @@
+{
+  "rooms": [
+    {
+      "roomNumber": "101",
+      "invigilatorName": "Mr Tehseen",
+      "invigilatorContact": "+92 03142336445",
+      "examID": "E-0001",
+      "teacherName": "Mr Akbar",
+      "subjectName": "Computer Vision",
+      "students": [
+        {
+          "rollNumber": "A101",
+          "attendance": "P",
+          "startTime": "09:00 AM",
+          "endTime": "12:00 PM"
+        },
+        {
+          "rollNumber": "A102",
+          "attendance": "P",
+          "startTime": "09:00 AM",
+          "endTime": "12:00 PM"
+        },
+        {
+          "rollNumber": "A103",
+          "attendance": "A",
+          "startTime": "-",
+          "endTime": "-"
+        },
+        {
+          "rollNumber": "A104",
+          "attendance": "P",
+          "startTime": "09:00 AM",
+          "endTime": "12:00 PM"
+        },
+        {
+          "rollNumber": "A105",
+          "attendance": "A",
+          "startTime": "-",
+          "endTime": "-"
+        }
+      ]
+    },
+    {
+      "roomNumber": "102",
+      "invigilatorName": "Mr Inayat",
+      "invigilatorContact": "+92 03135463652",
+      "examID": "E-0002",
+      "teacherName": "Mr Ali",
+      "subjectName": "Intro to AI",
+      "students": [
+        {
+          "rollNumber": "B101",
+          "attendance": "P",
+          "startTime": "10:00 AM",
+          "endTime": "01:00 PM"
+        },
+        {
+          "rollNumber": "B102",
+          "attendance": "A",
+          "startTime": "-",
+          "endTime": "-"
+        },
+        {
+          "rollNumber": "B103",
+          "attendance": "P",
+          "startTime": "10:00 AM",
+          "endTime": "01:00 PM"
+        },
+        {
+          "rollNumber": "B104",
+          "attendance": "P",
+          "startTime": "10:00 AM",
+          "endTime": "01:00 PM"
+        },
+        {
+          "rollNumber": "B105",
+          "attendance": "A",
+          "startTime": "-",
+          "endTime": "-"
+        }
+      ]
+    },
+    {
+      "roomNumber": "103",
+      "invigilatorName": "Mr Naeem",
+      "invigilatorContact": "+92 03154775452",
+      "examID": "E-0003",
+      "teacherName": "Mr Basharat",
+      "subjectName": "Operating System",
+      "students": [
+        {
+          "rollNumber": "C101",
+          "attendance": "P",
+          "startTime": "11:00 AM",
+          "endTime": "02:00 PM"
+        },
+        {
+          "rollNumber": "C102",
+          "attendance": "A",
+          "startTime": "-",
+          "endTime": "-"
+        },
+        {
+          "rollNumber": "C103",
+          "attendance": "P",
+          "startTime": "11:00 AM",
+          "endTime": "02:00 PM"
+        },
+        {
+          "rollNumber": "C104",
+          "attendance": "P",
+          "startTime": "11:00 AM",
+          "endTime": "02:00 PM"
+        },
+        {
+          "rollNumber": "C105",
+          "attendance": "A",
+          "startTime": "-",
+          "endTime": "-"
+        }
+      ]
+    },
+    {
+      "roomNumber": "104",
+      "invigilatorName": "Mr Mohsin",
+      "invigilatorContact": "03135463652",
+      "examID": "E-0004",
+      "teacherName": "Mr Khubaib",
+      "subjectName": "ANN",
+      "students": [
+        {
+          "rollNumber": "D101",
+          "attendance": "P",
+          "startTime": "12:00 PM",
+          "endTime": "03:00 PM"
+        },
+        {
+          "rollNumber": "D102",
+          "attendance": "A",
+          "startTime": "-",
+          "endTime": "-"
+        },
+        {
+          "rollNumber": "D103",
+          "attendance": "P",
+          "startTime": "12:00 PM",
+          "endTime": "03:00 PM"
+        },
+        {
+          "rollNumber": "D104",
+          "attendance": "P",
+          "startTime": "12:00 PM",
+          "endTime": "03:00 PM"
+        },
+        {
+          "rollNumber": "D105",
+          "attendance": "A",
+          "startTime": "-",
+          "endTime": "-"
+        }
+      ]
+    },
+    {
+      "roomNumber": "105",
+      "invigilatorName": "Mr Usman",
+      "invigilatorContact": "+92 03232336524",
+      "examID": "E-0005",
+      "teacherName": "Mr Abid",
+      "subjectName": "Data Mining",
+      "students": [
+        {
+          "rollNumber": "E101",
+          "attendance": "P",
+          "startTime": "01:00 PM",
+          "endTime": "04:00 PM"
+        },
+        {
+          "rollNumber": "E102",
+          "attendance": "A",
+          "startTime": "-",
+          "endTime": "-"
+        },
+        {
+          "rollNumber": "E103",
+          "attendance": "P",
+          "startTime": "01:00 PM",
+          "endTime": "04:00 PM"
+        },
+        {
+          "rollNumber": "E104",
+          "attendance": "P",
+          "startTime": "01:00 PM",
+          "endTime": "04:00 PM"
+        },
+        {
+          "rollNumber": "E105",
+          "attendance": "A",
+          "startTime": "-",
+          "endTime": "-"
+        }
+      ]
+    }
+  ]
+}
