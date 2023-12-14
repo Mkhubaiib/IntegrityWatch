@@ -8,7 +8,7 @@ const dummyData = require("./data.json");
 const app = express();
 app.use(
   cors({
-    origin: "https://integriity-watch.vercel.app",
+    origin: "https://ai-integritywatch.vercel.app/",
     methods: ["GET", "POST"],
     credentials: true,
   })
@@ -70,7 +70,7 @@ app.get("/getData", async (req, res) => {
 const addDataOnStartup = async () => {
   try {
     const response = await axios.get(
-      "https://integrity-watch.vercel.app/getData"
+      "https://integritywatch-server.vercel.app/getData"
     );
     // const response  = await axios.post("http://localhost:4000/addData", dummyData);
     console.log(response.data);
