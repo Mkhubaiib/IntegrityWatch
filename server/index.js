@@ -8,7 +8,7 @@ const dummyData = require("./data.json");
 const app = express();
 app.use(
   cors({
-    origin: "https://ai-integritywatch.vercel.app/",
+    origin: "https://ai-integritywatch.vercel.app",
     methods: ["GET", "POST"],
     credentials: true,
   })
