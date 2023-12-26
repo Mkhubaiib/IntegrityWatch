@@ -9,16 +9,26 @@ import Monitering from "./pages/Monitering/index.jsx";
 import axios from "axios";
 import SuspiciousActivity from "./pages/suspiciousactivity/index.jsx";
 import Cameramanagment from "./pages/cameramanagment/index.jsx";
+import Login from "./pages/authentication/Login.jsx";
+import Signup from "./pages/authentication/Signup.jsx";
 
 function App() {
   const [active, setActive] = useState(-1);
   const [data, setData] = useState([]);
+  const [user, setUser] = useState(null);
   const navigate = useNavigate();
 
   // setting active tab
 
   useEffect(() => {
-    navigate("/");
+    const userinfo = JSON.parse(localStorage.getItem("user"));
+    if (userinfo) {
+      setUser(userinfo);
+      console.log("userssss", userinfo.email);
+      navigate("/");
+    } else {
+      navigate("/login");
+    }
   }, []);
 
   // fetching data
@@ -78,11 +88,26 @@ function App() {
   }, []); // Empty // Include alarm in the dependency array
 
   return (
-    <Mainlayout active={active} setActive={setActive}>
+    <Mainlayout active={active} setActive={setActive} user={user} setUser={setUser}>
       <Routes>
         <Route
           path="/"
           element={<Homepage active={active} setActive={setActive} />}
+        />
+        <Route
+          path="/login"
+          element={
+            <Login
+              active={active}
+              setActive={setActive}
+              user={user}
+              setUser={setUser}
+            />
+          }
+        />
+        <Route
+          path="/signup"
+          element={<Signup active={active} setActive={setActive} />}
         />
         <Route
           path="/list"

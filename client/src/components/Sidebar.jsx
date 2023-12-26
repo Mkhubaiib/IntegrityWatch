@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-const Sidebar = ({ active, setActive }) => {
+import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
+
+const Sidebar = ({ active, setActive, user, setUser }) => {
+  const navigate = useNavigate();
+
   const featurelist = [
     { name: "Visual Alerts", subitems: ["Start", "pause", "stop/end"] },
     {
@@ -14,6 +18,13 @@ const Sidebar = ({ active, setActive }) => {
     },
     { name: "Classes List", subitems: [], link: "/list" },
   ];
+
+  const Logout = () => {
+    localStorage.removeItem("user");
+    setUser(null);
+    navigate("./login");
+    console.log("i RUn");
+  };
 
   return (
     <div className=" bg-white shadow-lg min-h-[100vh] ">
@@ -33,8 +44,8 @@ const Sidebar = ({ active, setActive }) => {
             className="rounded-full w-[60px] h-[60px] cursor-pointer"
           />
           <div className="flex justify-center items-start flex-col">
-            <p className="text-[16px]">Muhammad Khubaib </p>
-            <p className="text-[12px] text-[#334D6E]">mkhubaiib1@gmail.com</p>
+            <p className="text-[16px]">{user.displayName}</p>
+            <p className="text-[12px] text-[#334D6E]">{user.email}</p>
           </div>
         </div>
 
@@ -61,7 +72,11 @@ const Sidebar = ({ active, setActive }) => {
                           +
                         </p>
                       </div>
-                      <p className={`hover:text-[#109CF1] cursor-pointer font-semibold   ${active == index ? "text-[#109CF1]" : "text-[#334D6E]"}`}>
+                      <p
+                        className={`hover:text-[#109CF1] cursor-pointer font-semibold   ${
+                          active == index ? "text-[#109CF1]" : "text-[#334D6E]"
+                        }`}
+                      >
                         {item.name}
                       </p>
                     </div>
@@ -113,8 +128,11 @@ const Sidebar = ({ active, setActive }) => {
           <div className="text-[#334D6E]">
             <p className="font-bold  text-[#334D6E] text-[18px]">...</p>
           </div>
-          <p className="hover:text-[#109CF1] text-[#334D6E]   font-semibold cursor-pointer">
-            Settings
+          <p
+            className="hover:text-[#109CF1] text-[#334D6E]   font-semibold cursor-pointer"
+            onClick={() => Logout()}
+          >
+            Logout{" "}
           </p>
         </div>
       </div>
