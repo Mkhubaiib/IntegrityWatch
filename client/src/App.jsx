@@ -64,10 +64,11 @@ function App() {
     setalarm({ audio: newAudio });
 
     const timeoutId = setTimeout(() => {
-      setShowAudioAndImage(true);
+      user && setShowAudioAndImage(true);
 
       // Use the state updater function to get the latest state
-      setalarm((prevalarm) => {
+      console.log("i run");
+      user && setalarm((prevalarm) => {
         if (prevalarm && prevalarm.audio) {
           prevalarm.audio.play().catch((error) => {
             // Autoplay was prevented, handle the error here
@@ -76,7 +77,7 @@ function App() {
         }
         return prevalarm;
       });
-    }, 5000);
+    }, 15000);
 
     return () => {
       clearTimeout(timeoutId);
@@ -85,10 +86,15 @@ function App() {
         newAudio.currentTime = 0;
       }
     };
-  }, []); // Empty // Include alarm in the dependency array
+  }, [user]); // Empty // Include alarm in the dependency array
 
   return (
-    <Mainlayout active={active} setActive={setActive} user={user} setUser={setUser}>
+    <Mainlayout
+      active={active}
+      setActive={setActive}
+      user={user}
+      setUser={setUser}
+    >
       <Routes>
         <Route
           path="/"
